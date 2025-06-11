@@ -2,11 +2,20 @@ from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from typing import List
+from fastapi.middleware.cors import CORSMiddleware
+
 
 from app import models, schemas
 from app.database import AsyncSessionLocal, engine, Base
 
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 async def get_db():
     async with AsyncSessionLocal() as session:
