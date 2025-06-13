@@ -27,7 +27,6 @@ export default function TeamForm() {
     <form onSubmit={handleSubmit}>
       <h2>{team_id ? "Edit" : "Create"} Team</h2>
       <input name="name" placeholder="Name" value={form.name} onChange={handleChange} /><br />
-      <input name="age" type="number" placeholder="Age" value={form.age} onChange={handleChange} /><br />
       <input name="location" placeholder="Location" value={form.location} onChange={handleChange} /><br />
       <button type="submit">Submit</button>
     </form>

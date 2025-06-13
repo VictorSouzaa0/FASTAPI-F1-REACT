@@ -3,9 +3,8 @@ from typing import Optional
 
 class TeamBase(BaseModel):
     name: str
-    age: int
     location: str
-    image: Optional[bytes] = None 
+    image: Optional[str] = None 
 
 class TeamCreate(TeamBase):
     pass
@@ -19,7 +18,7 @@ class Team(TeamBase):
 class DriverBase(BaseModel):
     name: str
     age: int
-    image: Optional[bytes] = None 
+    image: Optional[str] = None 
     team_id: int
 
 class DriverCreate(DriverBase):

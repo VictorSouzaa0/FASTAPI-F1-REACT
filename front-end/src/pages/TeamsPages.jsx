@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link  } from "react-router-dom";
 import { getTeams, deleteTeam } from "../services/api";
 
 export default function TeamsPages() {
